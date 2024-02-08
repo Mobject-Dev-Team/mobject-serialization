@@ -176,6 +176,13 @@ VAR_INPUT
 	Key : T_MAXSTRING;
 END_VAR]]></Declaration>
     </Method>
+    <Method Name="AddKeyObject" Id="{9ba9031f-1279-0c88-3c83-ddbbe1039150}">
+      <Declaration><![CDATA[METHOD PUBLIC AddKeyObject : I_Serializer
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Object : I_Serializable;
+END_VAR]]></Declaration>
+    </Method>
     <Method Name="AddKeyReal" Id="{dd8ea360-144c-42c7-a4e1-38913b192e00}">
       <Declaration><![CDATA[METHOD PUBLIC AddKeyReal : I_Serializer
 VAR_INPUT
@@ -281,6 +288,13 @@ END_VAR]]></Declaration>
       <Declaration><![CDATA[METHOD PUBLIC AddNull : I_Serializer
 VAR_INPUT
 END_VAR]]></Declaration>
+    </Method>
+    <Method Name="AddObject" Id="{6a45c7ae-f2d8-07fa-162d-ccbc6129ba9f}">
+      <Declaration><![CDATA[METHOD PUBLIC AddObject
+VAR_INPUT
+	Object : I_Serializable;
+END_VAR
+]]></Declaration>
     </Method>
     <Method Name="AddReal" Id="{37a1ed66-5e4c-49c9-a63a-d06d4077642d}">
       <Declaration><![CDATA[METHOD PUBLIC AddReal : I_Serializer

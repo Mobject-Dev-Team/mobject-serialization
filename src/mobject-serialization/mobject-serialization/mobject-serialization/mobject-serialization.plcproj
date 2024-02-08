@@ -19,7 +19,7 @@
     <Company>mobject</Company>
     <Released>false</Released>
     <Title>mobject-serialization</Title>
-    <ProjectVersion>0.1.0</ProjectVersion>
+    <ProjectVersion>0.2.0</ProjectVersion>
     <DefaultNamespace>mobject-serialization</DefaultNamespace>
     <Placeholder>mobject-serialization</Placeholder>
     <Author>mobject dev team</Author>
@@ -37,8 +37,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Interfaces" />
+    <Folder Include="GarbageCollector" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GarbageCollector\DeserializerGarbageCollector.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GarbageCollector\I_DeserializerGarbageCollector.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_Deserializable.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_Deserializer.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Interfaces\I_Serializable.TcIO">
       <SubType>Code</SubType>
     </Compile>
@@ -47,6 +60,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <LibraryReference Include="mobject-collections,1.0.0,mobject">
+      <Namespace>mobject_collections</Namespace>
+    </LibraryReference>
     <LibraryReference Include="mobject-disposable,1.0.0,mobject">
       <Namespace>mobject_disposable</Namespace>
     </LibraryReference>

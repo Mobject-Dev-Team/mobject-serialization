@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Deserializer" Id="{e96c27aa-698b-014b-1c6d-55f7ccdb148d}">
+    <Declaration><![CDATA[INTERFACE I_Deserializer EXTENDS I_Disposable]]></Declaration>
+    <Method Name="GetArray" Id="{4e01a048-1f13-0559-1cde-8714497f751e}">
+      <Declaration><![CDATA[METHOD GetArray : I_Deserializer
+VAR_INPUT
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="GetElementByIndex" Id="{4b4f1011-c89a-0a11-2e22-8fa34c031a96}">
+      <Declaration><![CDATA[METHOD GetElementByIndex : I_Deserializer
+VAR_INPUT
+	Index : UDINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="GetKey" Id="{e9a4f108-3f3e-020c-0848-f8825d59d1ba}">
+      <Declaration><![CDATA[METHOD GetKey : I_Deserializer
+VAR_INPUT
+	Key : T_MAXSTRING;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="GetKeyArray" Id="{8259bfad-07ce-0d53-2995-745eb365d3e9}">
+      <Declaration><![CDATA[METHOD GetKeyArray : I_Deserializer
+VAR_INPUT
+	Key : T_MAXSTRING;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryDeserializeKeyToObject" Id="{8459f836-b614-0a96-3c0c-8bfbd6cfee3a}">
+      <Declaration><![CDATA[METHOD TryDeserializeKeyToObject : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Object : I_Deserializable;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryDeserializeToObject" Id="{ac8f3dfb-d3f9-00ab-35be-2c39c7569d91}">
+      <Declaration><![CDATA[METHOD TryDeserializeToObject : BOOL
+VAR_INPUT
+	Object : I_Deserializable;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetBase64" Id="{189dda1b-23e0-01ed-0775-7e1b97c28eab}">
+      <Declaration><![CDATA[METHOD TryGetBase64 : BOOL
+VAR_INPUT
+	pBytes : POINTER TO BYTE;
+	nBytes : DINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetBool" Id="{8872862d-bc1d-033f-07f0-c8bcf61bc2ee}">
+      <Declaration><![CDATA[METHOD TryGetBool : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO BOOL;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetByte" Id="{99e236eb-ae85-0362-1fc4-a06ebdf9be9b}">
+      <Declaration><![CDATA[METHOD TryGetByte : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO BYTE;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetDateTime" Id="{e85b4e8e-2ee3-0571-36eb-b382bebf45ac}">
+      <Declaration><![CDATA[METHOD TryGetDateTime : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO DATE_AND_TIME;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetDcTime" Id="{649891ab-6a3e-064b-2cc7-7150f7514aec}">
+      <Declaration><![CDATA[METHOD TryGetDcTime : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO DCTIME;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetDint" Id="{9465264c-2d79-0ec1-090b-0549b5866553}">
+      <Declaration><![CDATA[METHOD TryGetDint : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO DINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetDword" Id="{742dbf5d-6fd6-04c6-21e7-e66fd691d6ef}">
+      <Declaration><![CDATA[METHOD TryGetDword : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO DWORD;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetFileTime" Id="{892cdfb8-d0ef-03e7-0b2c-8733bf5e9af1}">
+      <Declaration><![CDATA[METHOD TryGetFileTime : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO FILETIME;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetHexAsBytes" Id="{b1c6d9d5-370c-098c-3311-1ac76e3252a1}">
+      <Declaration><![CDATA[METHOD TryGetHexAsBytes : BOOL
+VAR_INPUT
+	pBytes : POINTER TO BYTE;
+	nBytes : DINT;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="TryGetInt" Id="{c96b92d1-1765-0d93-33db-d4868586a0bf}">
+      <Declaration><![CDATA[METHOD TryGetInt : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO INT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyBase64" Id="{045df921-01d9-0c37-160a-c835e48b0444}">
+      <Declaration><![CDATA[METHOD TryGetKeyBase64 : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	pBytes : POINTER TO BYTE;
+	nBytes : DINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyBool" Id="{b992fe36-aba1-012c-3b9b-35be4505eeec}">
+      <Declaration><![CDATA[METHOD TryGetKeyBool : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO BOOL;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyByte" Id="{faf761f6-ae22-0006-37c5-204d4de6ae06}">
+      <Declaration><![CDATA[METHOD TryGetKeyByte : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO BYTE;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyDateTime" Id="{249f0722-6ce3-000f-1a4b-98a2f365f3cb}">
+      <Declaration><![CDATA[METHOD TryGetKeyDateTime : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO DATE_AND_TIME;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyDcTime" Id="{de96ff41-0c97-0422-27d0-eedeb31995cd}">
+      <Declaration><![CDATA[METHOD TryGetKeyDcTime : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO DCTIME;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyDint" Id="{6449771a-d4a7-07f3-1956-b06eab3919a1}">
+      <Declaration><![CDATA[METHOD TryGetKeyDint : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO DINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyDword" Id="{bcf15609-a2df-0803-288f-a8b7d7eb9ea7}">
+      <Declaration><![CDATA[METHOD TryGetKeyDword : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO DWORD;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyFileTime" Id="{28ae4c04-e8e2-06b3-1d89-e4110610cc18}">
+      <Declaration><![CDATA[METHOD TryGetKeyFileTime : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO FILETIME;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyHexAsBytes" Id="{8b8ee057-a961-0978-1c83-1dba3578f97d}">
+      <Declaration><![CDATA[METHOD TryGetKeyHexAsBytes : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	pBytes : POINTER TO BYTE;
+	nBytes : DINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyInt" Id="{7bcc67a0-80a8-00bf-2da2-b350f5ccca66}">
+      <Declaration><![CDATA[METHOD TryGetKeyInt : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO INT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyLint" Id="{379d114f-151c-0fe4-112b-66d6666e8b26}">
+      <Declaration><![CDATA[METHOD TryGetKeyLint : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO LINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyLreal" Id="{74776e49-31ba-0352-31f8-4e7d31ad71f7}">
+      <Declaration><![CDATA[METHOD TryGetKeyLreal : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO LREAL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyLtime" Id="{165e78a4-ff2e-0196-3680-15c854cabb5a}">
+      <Declaration><![CDATA[METHOD TryGetKeyLtime : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO LTIME;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyLword" Id="{835f7d73-c723-068d-13fc-7dc3c161d887}">
+      <Declaration><![CDATA[METHOD TryGetKeyLword : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO LWORD;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyReal" Id="{5c280221-8f36-0a63-36cd-3e65ee409829}">
+      <Declaration><![CDATA[METHOD TryGetKeyReal : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO REAL;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeySint" Id="{7a9589fc-f2aa-03fa-3827-e31a8e1dfccf}">
+      <Declaration><![CDATA[METHOD TryGetKeySint : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO SINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyString" Id="{f2ea10e0-212d-0b20-0675-0794b75d0dc2}">
+      <Declaration><![CDATA[METHOD TryGetKeyString : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO STRING;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyTime" Id="{4aa8a78c-6631-03b6-1766-b2de77282e5b}">
+      <Declaration><![CDATA[METHOD TryGetKeyTime : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO TIME;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyTod" Id="{5b544ad5-8df2-029b-1058-864917997a3e}">
+      <Declaration><![CDATA[METHOD TryGetKeyTod : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO TOD;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyUdint" Id="{d9c52fd0-6c44-05c7-35c3-d3b714750efc}">
+      <Declaration><![CDATA[METHOD TryGetKeyUdint : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO UDINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyUint" Id="{562901cf-4968-0499-2ba5-58d536a07e96}">
+      <Declaration><![CDATA[METHOD TryGetKeyUint : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO UINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyUlint" Id="{af2a67e2-87cc-023e-1eea-d4ff65a11a1b}">
+      <Declaration><![CDATA[METHOD TryGetKeyUlint : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO ULINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyUsint" Id="{d342ffcb-b2dd-00fb-10d8-eac555eddee3}">
+      <Declaration><![CDATA[METHOD TryGetKeyUsint : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO USINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetKeyWord" Id="{984e3625-b559-0a67-1eae-0ac2f91ec25c}">
+      <Declaration><![CDATA[METHOD TryGetKeyWord : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Destination : REFERENCE TO WORD;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetLint" Id="{93c79fe4-a027-0d76-28ba-e4b0e16c620b}">
+      <Declaration><![CDATA[METHOD TryGetLint : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO LINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetLreal" Id="{9d8c81bd-1797-07ee-1330-f995236eeae2}">
+      <Declaration><![CDATA[METHOD TryGetLreal : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO LREAL;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetLtime" Id="{09637119-c826-0b3f-37ed-c6bf4d96a877}">
+      <Declaration><![CDATA[METHOD TryGetLtime : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO LTIME;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetLword" Id="{e4212b0e-b035-05e8-1760-14b798c1d53d}">
+      <Declaration><![CDATA[METHOD TryGetLword : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO LWORD;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="TryGetReal" Id="{8a861469-bea1-0a8a-2ebb-674a99f9a87c}">
+      <Declaration><![CDATA[METHOD TryGetReal : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO REAL;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetSint" Id="{0ef1e145-3101-0de1-14fe-b899f956d82c}">
+      <Declaration><![CDATA[METHOD TryGetSint : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO SINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetString" Id="{a2908ad5-d906-0a7b-1a60-9ae33b56e2d4}">
+      <Declaration><![CDATA[METHOD TryGetString : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO STRING;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetTime" Id="{666c893d-b052-0e11-04e4-00a4ab5c4bea}">
+      <Declaration><![CDATA[METHOD TryGetTime : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO TIME;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetTod" Id="{78b0add3-bf2f-0649-0281-c73f0ab9b119}">
+      <Declaration><![CDATA[METHOD TryGetTod : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO TOD;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetUdint" Id="{93af68c4-7a65-0e51-392a-1544ea401428}">
+      <Declaration><![CDATA[METHOD TryGetUdint : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO UDINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetUint" Id="{7191e270-12ff-02ce-303b-e98364a1144d}">
+      <Declaration><![CDATA[METHOD TryGetUint : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO UINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetUlint" Id="{d9fea889-d62c-08bc-0c37-4d568502a776}">
+      <Declaration><![CDATA[METHOD TryGetUlint : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO ULINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetUsint" Id="{f1a40a58-6a4a-0570-2961-25120481c37e}">
+      <Declaration><![CDATA[METHOD TryGetUsint : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO USINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="TryGetWord" Id="{df5797f5-df73-0b0a-0f9a-0e0e0b7979dd}">
+      <Declaration><![CDATA[METHOD TryGetWord : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO WORD;
+END_VAR]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

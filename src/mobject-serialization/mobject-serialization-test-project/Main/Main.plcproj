@@ -24,10 +24,17 @@
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Tests\DeserializerGarbageCollector_TestSuite.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\Mocks\MockDisposableDeserializer.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tests" />
     <Folder Include="POUs" />
+    <Folder Include="Tests\Mocks" />
   </ItemGroup>
   <ItemGroup>
     <PlaceholderReference Include="Tc2_Standard">
@@ -44,6 +51,7 @@
     </PlaceholderReference>
     <PlaceholderReference Include="TcUnit">
       <DefaultResolution>TcUnit, * (www.tcunit.org)</DefaultResolution>
+      <Namespace>TcUnit</Namespace>
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
@@ -52,7 +60,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <LibraryReference Include="mobject-serialization,0.1.0,mobject">
+    <LibraryReference Include="mobject-serialization,0.2.0,mobject">
       <Namespace>mobject_serialization</Namespace>
     </LibraryReference>
   </ItemGroup>

@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <Itf Name="I_Serializable" Id="{17b600c5-ab7b-4b18-a049-defe2038de4c}">
-    <Declaration><![CDATA[INTERFACE I_Serializable EXTENDS __SYSTEM.IQueryInterface
-]]></Declaration>
+    <Declaration><![CDATA[INTERFACE I_Serializable EXTENDS __SYSTEM.IQueryInterface]]></Declaration>
     <Method Name="SerializeWith" Id="{5e384843-bd6d-4596-9678-cdd5191d1928}">
       <Declaration><![CDATA[METHOD SerializeWith
 VAR_INPUT
