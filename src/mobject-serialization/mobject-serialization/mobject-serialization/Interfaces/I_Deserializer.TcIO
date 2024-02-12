@@ -2,6 +2,9 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <Itf Name="I_Deserializer" Id="{e96c27aa-698b-014b-1c6d-55f7ccdb148d}">
     <Declaration><![CDATA[INTERFACE I_Deserializer EXTENDS I_Disposable]]></Declaration>
+    <Method Name="Clone" Id="{8fdff3d0-4253-0f97-2d16-7bb46ae27faf}">
+      <Declaration><![CDATA[METHOD PUBLIC Clone : I_Deserializer]]></Declaration>
+    </Method>
     <Method Name="GetArray" Id="{4e01a048-1f13-0559-1cde-8714497f751e}">
       <Declaration><![CDATA[METHOD GetArray : I_Deserializer
 VAR_INPUT
@@ -23,19 +26,6 @@ END_VAR]]></Declaration>
       <Declaration><![CDATA[METHOD GetKeyArray : I_Deserializer
 VAR_INPUT
 	Key : T_MAXSTRING;
-END_VAR]]></Declaration>
-    </Method>
-    <Method Name="TryDeserializeKeyToObject" Id="{8459f836-b614-0a96-3c0c-8bfbd6cfee3a}">
-      <Declaration><![CDATA[METHOD TryDeserializeKeyToObject : BOOL
-VAR_INPUT
-	Key : T_MAXSTRING;
-	Object : I_Deserializable;
-END_VAR]]></Declaration>
-    </Method>
-    <Method Name="TryDeserializeToObject" Id="{ac8f3dfb-d3f9-00ab-35be-2c39c7569d91}">
-      <Declaration><![CDATA[METHOD TryDeserializeToObject : BOOL
-VAR_INPUT
-	Object : I_Deserializable;
 END_VAR]]></Declaration>
     </Method>
     <Method Name="TryGetBase64" Id="{189dda1b-23e0-01ed-0775-7e1b97c28eab}">
@@ -203,6 +193,13 @@ VAR_INPUT
 	Destination : REFERENCE TO LWORD;
 END_VAR]]></Declaration>
     </Method>
+    <Method Name="TryGetKeyObject" Id="{8459f836-b614-0a96-3c0c-8bfbd6cfee3a}">
+      <Declaration><![CDATA[METHOD TryGetKeyObject : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Object : I_Deserializable;
+END_VAR]]></Declaration>
+    </Method>
     <Method Name="TryGetKeyReal" Id="{5c280221-8f36-0a63-36cd-3e65ee409829}">
       <Declaration><![CDATA[METHOD TryGetKeyReal : BOOL
 VAR_INPUT
@@ -298,6 +295,12 @@ VAR_INPUT
 	Destination : REFERENCE TO LWORD;
 END_VAR
 ]]></Declaration>
+    </Method>
+    <Method Name="TryGetObject" Id="{ac8f3dfb-d3f9-00ab-35be-2c39c7569d91}">
+      <Declaration><![CDATA[METHOD TryGetObject : BOOL
+VAR_INPUT
+	Object : I_Deserializable;
+END_VAR]]></Declaration>
     </Method>
     <Method Name="TryGetReal" Id="{8a861469-bea1-0a8a-2ebb-674a99f9a87c}">
       <Declaration><![CDATA[METHOD TryGetReal : BOOL

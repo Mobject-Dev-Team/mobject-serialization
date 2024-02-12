@@ -48,7 +48,7 @@ Returns a deserializer for an array located by its key.
 | ---------- | ----------- | --------------------- |
 | Key        | T_MAXSTRING | The key of the array. |
 
-### TryDeserializeKeyToObject(Key: T_MAXSTRING, Object: I_Deserializable) : BOOL
+### TryGetKeyObject(Key: T_MAXSTRING, Object: I_Deserializable) : BOOL
 
 Attempts to deserialize a key to an object.
 
@@ -59,7 +59,7 @@ Attempts to deserialize a key to an object.
 | Key        | T_MAXSTRING      | The key of the object to deserialize. |
 | Object     | I_Deserializable | The object to deserialize to.         |
 
-### TryDeserializeToObject(Object: I_Deserializable) : BOOL
+### TryGetObject(Object: I_Deserializable) : BOOL
 
 Attempts to deserialize data to an object.
 

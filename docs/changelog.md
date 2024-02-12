@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.3.0-alpha
+
+!> This update contains the following breaking changes.
+
+- Added Clone to I_Deserializer interface.
+- Renamed TryDeserializeKeyToObject and TryDeserializeToObject to TryGetKeyObject and TryGetObject inside the I_Deserializer interface.
+
 ## v0.2.0-alpha
 
 - Added I_Deserializer and I_Deserializable

@@ -9,6 +9,12 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Method Name="Clone" Id="{931439f3-bd48-09d3-2e5f-b7d629749da7}">
+      <Declaration><![CDATA[METHOD PUBLIC Clone : I_Deserializer]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <Method Name="Dispose" Id="{92caf2b9-f081-0528-0e8d-857606ffd3d1}">
       <Declaration><![CDATA[METHOD PUBLIC Dispose
 VAR_INPUT
@@ -64,25 +70,6 @@ END_VAR
         </Implementation>
       </Get>
     </Property>
-    <Method Name="TryDeserializeKeyToObject" Id="{3bf8532c-5862-054b-1f0e-8c4449b91a92}">
-      <Declaration><![CDATA[METHOD TryDeserializeKeyToObject : BOOL
-VAR_INPUT
-	Key : T_MAXSTRING;
-	Object : I_Deserializable;
-END_VAR]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[]]></ST>
-      </Implementation>
-    </Method>
-    <Method Name="TryDeserializeToObject" Id="{bd5d60c8-c8c2-0061-2023-b563e7215d93}">
-      <Declaration><![CDATA[METHOD TryDeserializeToObject : BOOL
-VAR_INPUT
-	Object : I_Deserializable;
-END_VAR]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[]]></ST>
-      </Implementation>
-    </Method>
     <Method Name="TryGetBase64" Id="{3caf7798-d301-0947-3f47-b5d39e303e66}">
       <Declaration><![CDATA[METHOD TryGetBase64 : BOOL
 VAR_INPUT
@@ -320,6 +307,16 @@ END_VAR]]></Declaration>
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Method Name="TryGetKeyObject" Id="{3bf8532c-5862-054b-1f0e-8c4449b91a92}">
+      <Declaration><![CDATA[METHOD TryGetKeyObject : BOOL
+VAR_INPUT
+	Key : T_MAXSTRING;
+	Object : I_Deserializable;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <Method Name="TryGetKeyReal" Id="{f9e96312-3ece-0713-0a44-85c330c42ec1}">
       <Declaration><![CDATA[METHOD TryGetKeyReal : BOOL
 VAR_INPUT
@@ -454,6 +451,15 @@ VAR_INPUT
 	Destination : REFERENCE TO LWORD;
 END_VAR
 ]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="TryGetObject" Id="{bd5d60c8-c8c2-0061-2023-b563e7215d93}">
+      <Declaration><![CDATA[METHOD TryGetObject : BOOL
+VAR_INPUT
+	Object : I_Deserializable;
+END_VAR]]></Declaration>
       <Implementation>
         <ST><![CDATA[]]></ST>
       </Implementation>
