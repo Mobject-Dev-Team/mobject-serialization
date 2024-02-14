@@ -19,7 +19,7 @@
     <Company>mobject</Company>
     <Released>false</Released>
     <Title>mobject-serialization</Title>
-    <ProjectVersion>0.3.0</ProjectVersion>
+    <ProjectVersion>0.4.0</ProjectVersion>
     <DefaultNamespace>mobject-serialization</DefaultNamespace>
     <Placeholder>mobject-serialization</Placeholder>
     <Author>mobject dev team</Author>
@@ -50,6 +50,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Interfaces\I_Deserializer.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_DeserializerForwardEnumerator.TcIO">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Interfaces\I_Serializable.TcIO">

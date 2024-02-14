@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.4.0-alpha
+
+- Added I_DeserializerForwardEnumerator
+
+!> This update contains the following breaking changes.
+
+- I_Deserializer additions, Must now support the following added methods.
+  - GetArrayElementEnumerator
+  - GetObjectKeyEnumerator
+  - TryGetName
+
 ## v0.3.0-alpha
 
 !> This update contains the following breaking changes.

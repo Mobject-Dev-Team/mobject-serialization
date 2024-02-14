@@ -10,6 +10,11 @@
 VAR_INPUT
 END_VAR]]></Declaration>
     </Method>
+    <Method Name="GetArrayElementEnumerator" Id="{937685cc-dc05-0c4b-35d3-22b769ec25ca}">
+      <Declaration><![CDATA[METHOD GetArrayElementEnumerator : I_DeserializerForwardEnumerator
+VAR_INPUT
+END_VAR]]></Declaration>
+    </Method>
     <Method Name="GetElementByIndex" Id="{4b4f1011-c89a-0a11-2e22-8fa34c031a96}">
       <Declaration><![CDATA[METHOD GetElementByIndex : I_Deserializer
 VAR_INPUT
@@ -26,6 +31,11 @@ END_VAR]]></Declaration>
       <Declaration><![CDATA[METHOD GetKeyArray : I_Deserializer
 VAR_INPUT
 	Key : T_MAXSTRING;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="GetObjectKeyEnumerator" Id="{ea87f1d2-e22f-0992-1ca6-2990202fb03a}">
+      <Declaration><![CDATA[METHOD GetObjectKeyEnumerator : I_DeserializerForwardEnumerator
+VAR_INPUT
 END_VAR]]></Declaration>
     </Method>
     <Method Name="TryGetBase64" Id="{189dda1b-23e0-01ed-0775-7e1b97c28eab}">
@@ -295,6 +305,12 @@ VAR_INPUT
 	Destination : REFERENCE TO LWORD;
 END_VAR
 ]]></Declaration>
+    </Method>
+    <Method Name="TryGetName" Id="{5cddb139-a799-062a-332a-5808e7c49ef2}">
+      <Declaration><![CDATA[METHOD TryGetName : BOOL
+VAR_INPUT
+	Destination : REFERENCE TO STRING;
+END_VAR]]></Declaration>
     </Method>
     <Method Name="TryGetObject" Id="{ac8f3dfb-d3f9-00ab-35be-2c39c7569d91}">
       <Declaration><![CDATA[METHOD TryGetObject : BOOL
