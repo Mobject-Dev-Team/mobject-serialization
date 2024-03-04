@@ -2,14 +2,16 @@
 
 ## v0.4.0-alpha
 
-- Added I_DeserializerForwardEnumerator
+- Added I_DeserializerObjectForwardEnumerator
+- Added I_DeserializerArrayForwardEnumerator
 
 !> This update contains the following breaking changes.
 
 - I_Deserializer additions, Must now support the following added methods.
-  - GetArrayElementEnumerator
-  - GetObjectKeyEnumerator
-  - TryGetName
+  - GetArrayEnumerator
+  - GetObjectEnumerator
+  - GetObject
+- Renamed the GetKey to GetKeyObject
 
 ## v0.3.0-alpha
 

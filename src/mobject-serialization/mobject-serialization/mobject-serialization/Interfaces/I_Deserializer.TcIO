@@ -10,8 +10,8 @@
 VAR_INPUT
 END_VAR]]></Declaration>
     </Method>
-    <Method Name="GetArrayElementEnumerator" Id="{937685cc-dc05-0c4b-35d3-22b769ec25ca}">
-      <Declaration><![CDATA[METHOD GetArrayElementEnumerator : I_DeserializerForwardEnumerator
+    <Method Name="GetArrayEnumerator" Id="{937685cc-dc05-0c4b-35d3-22b769ec25ca}">
+      <Declaration><![CDATA[METHOD GetArrayEnumerator : I_DeserializerArrayForwardEnumerator
 VAR_INPUT
 END_VAR]]></Declaration>
     </Method>
@@ -21,20 +21,25 @@ VAR_INPUT
 	Index : UDINT;
 END_VAR]]></Declaration>
     </Method>
-    <Method Name="GetKey" Id="{e9a4f108-3f3e-020c-0848-f8825d59d1ba}">
-      <Declaration><![CDATA[METHOD GetKey : I_Deserializer
-VAR_INPUT
-	Key : T_MAXSTRING;
-END_VAR]]></Declaration>
-    </Method>
     <Method Name="GetKeyArray" Id="{8259bfad-07ce-0d53-2995-745eb365d3e9}">
       <Declaration><![CDATA[METHOD GetKeyArray : I_Deserializer
 VAR_INPUT
 	Key : T_MAXSTRING;
 END_VAR]]></Declaration>
     </Method>
-    <Method Name="GetObjectKeyEnumerator" Id="{ea87f1d2-e22f-0992-1ca6-2990202fb03a}">
-      <Declaration><![CDATA[METHOD GetObjectKeyEnumerator : I_DeserializerForwardEnumerator
+    <Method Name="GetKeyObject" Id="{e9a4f108-3f3e-020c-0848-f8825d59d1ba}">
+      <Declaration><![CDATA[METHOD GetKeyObject : I_Deserializer
+VAR_INPUT
+	Key : T_MAXSTRING;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="GetObject" Id="{9505e8c0-883d-06e1-0b1c-62d526c2559a}">
+      <Declaration><![CDATA[METHOD GetObject : I_Deserializer
+VAR_INPUT
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="GetObjectEnumerator" Id="{ea87f1d2-e22f-0992-1ca6-2990202fb03a}">
+      <Declaration><![CDATA[METHOD GetObjectEnumerator : I_DeserializerObjectForwardEnumerator
 VAR_INPUT
 END_VAR]]></Declaration>
     </Method>
@@ -305,12 +310,6 @@ VAR_INPUT
 	Destination : REFERENCE TO LWORD;
 END_VAR
 ]]></Declaration>
-    </Method>
-    <Method Name="TryGetName" Id="{5cddb139-a799-062a-332a-5808e7c49ef2}">
-      <Declaration><![CDATA[METHOD TryGetName : BOOL
-VAR_INPUT
-	Destination : REFERENCE TO STRING;
-END_VAR]]></Declaration>
     </Method>
     <Method Name="TryGetObject" Id="{ac8f3dfb-d3f9-00ab-35be-2c39c7569d91}">
       <Declaration><![CDATA[METHOD TryGetObject : BOOL

@@ -52,7 +52,10 @@
     <Compile Include="Interfaces\I_Deserializer.TcIO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interfaces\I_DeserializerForwardEnumerator.TcIO">
+    <Compile Include="Interfaces\I_DeserializerArrayForwardEnumerator.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_DeserializerObjectForwardEnumerator.TcIO">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Interfaces\I_Serializable.TcIO">
