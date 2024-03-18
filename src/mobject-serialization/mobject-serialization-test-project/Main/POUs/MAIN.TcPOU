@@ -3,11 +3,10 @@
   <POU Name="MAIN" Id="{7e4abf7d-f388-0143-26ed-b64153253fe1}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-	deserializerGarbageCollector_TestSuite : DeserializerGarbageCollector_TestSuite;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[TcUnit.RUN();]]></ST>
+      <ST><![CDATA[//TcUnit.RUN();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -397,15 +397,15 @@ END_VAR]]></Declaration>
 VAR_INPUT
 END_VAR]]></Declaration>
     </Method>
-    <Method Name="TryCopySerialziedData" Id="{b089a511-aa82-4ea4-a966-f29e05751c4c}">
-      <Declaration><![CDATA[METHOD TryCopySerialziedData : BOOL
+    <Method Name="TryCopySerializedData" Id="{b089a511-aa82-4ea4-a966-f29e05751c4c}">
+      <Declaration><![CDATA[METHOD TryCopySerializedData : BOOL
 VAR_INPUT
 	DestinationAddress : PVOID;
 	DestinationSize : UDINT;
 END_VAR]]></Declaration>
     </Method>
-    <Method Name="TryGetSerialziedData" Id="{f7ffa1bd-a3ef-402a-8560-d7216b36be70}">
-      <Declaration><![CDATA[METHOD TryGetSerialziedData : BOOL
+    <Method Name="TryGetSerializedData" Id="{f7ffa1bd-a3ef-402a-8560-d7216b36be70}">
+      <Declaration><![CDATA[METHOD TryGetSerializedData : BOOL
 VAR_INPUT
 	DestinationAddress : PVOID;
 	DestinationSize : UDINT;

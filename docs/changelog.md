@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.4.0-alpha
+
+!> This update contains the following breaking changes.
+
+- All deserializer code moved to mobject-deserializer
+
 ## v0.3.0-alpha
 
 !> This update contains the following breaking changes.

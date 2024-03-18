@@ -19,7 +19,7 @@
     <Company>mobject</Company>
     <Released>false</Released>
     <Title>mobject-serialization</Title>
-    <ProjectVersion>0.3.0</ProjectVersion>
+    <ProjectVersion>0.4.0</ProjectVersion>
     <DefaultNamespace>mobject-serialization</DefaultNamespace>
     <Placeholder>mobject-serialization</Placeholder>
     <Author>mobject dev team</Author>
@@ -37,21 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Interfaces" />
-    <Folder Include="GarbageCollector" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GarbageCollector\DeserializerGarbageCollector.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GarbageCollector\I_DeserializerGarbageCollector.TcIO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Interfaces\I_Deserializable.TcIO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Interfaces\I_Deserializer.TcIO">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Interfaces\I_Serializable.TcIO">
       <SubType>Code</SubType>
     </Compile>
@@ -60,9 +47,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <LibraryReference Include="mobject-collections,1.0.0,mobject">
-      <Namespace>mobject_collections</Namespace>
-    </LibraryReference>
     <LibraryReference Include="mobject-disposable,1.0.0,mobject">
       <Namespace>mobject_disposable</Namespace>
     </LibraryReference>
@@ -73,6 +57,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="Tc2_Standard">
+      <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Standard</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_System">
       <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_System</Namespace>
