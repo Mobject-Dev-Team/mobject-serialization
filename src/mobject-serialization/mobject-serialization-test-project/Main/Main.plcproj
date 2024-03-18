@@ -24,17 +24,10 @@
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Tests\DeserializerGarbageCollector_TestSuite.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Tests\Mocks\MockDisposableDeserializer.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tests" />
     <Folder Include="POUs" />
-    <Folder Include="Tests\Mocks" />
   </ItemGroup>
   <ItemGroup>
     <PlaceholderReference Include="Tc2_Standard">

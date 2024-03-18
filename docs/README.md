@@ -8,7 +8,7 @@
 
 ## The mobject-serialization Library
 
-This is one of the many libraries of [mobject](http://mobject.org). This library focuses on the handling of object serialization and deserialization.
+This is one of the many libraries of [mobject](http://mobject.org). This library focuses on the handling of object serialization.
 
 ## What is mobject?
 
@@ -20,4 +20,4 @@ mobject's goal is to be a lightweight solution to typical oop problems.
 
 ## Why use mobject-serialization?
 
-The mobject-serialization library provides a consistent way to handle the serialization and deserialization of objects in an industrial control system. It includes a set of common interfaces, allowing you to create your own serialization type, or to serialize objects to the included format JSON.
+The mobject-serialization library provides a consistent way to handle the serialization of objects in an industrial control system. It includes a set of common interfaces, allowing you to create your own serialization type, or to serialize objects to the included format JSON.

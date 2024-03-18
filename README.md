@@ -8,7 +8,7 @@
 
 ## The mobject-serialization Library
 
-This is one of the many libraries of [mobject](http://mobject.org). This library focuses on the handling of object serialization and deserialization.
+This is one of the many libraries of [mobject](http://mobject.org). This library focuses on the handling of object serialization.
 
 ## What is mobject?
 
@@ -24,4 +24,4 @@ The documentation for this project can be found [here](https://mobject-dev-team.
 
 ## Versions
 
-- TcXaeShell 3.1.4024.53
+- TcXaeShell 3.1.4024.55
