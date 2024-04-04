@@ -375,8 +375,8 @@ END_VAR]]></Declaration>
 VAR_INPUT
 END_VAR]]></Declaration>
     </Method>
-    <Method Name="GetSeralizedDataLength" Id="{dd25f96d-06dc-4960-8c8c-b867ac96101a}">
-      <Declaration><![CDATA[METHOD PUBLIC GetSeralizedDataLength : UDINT
+    <Method Name="GetSerializedDataLength" Id="{dd25f96d-06dc-4960-8c8c-b867ac96101a}">
+      <Declaration><![CDATA[METHOD PUBLIC GetSerializedDataLength : UDINT
 VAR_INPUT
 END_VAR
 ]]></Declaration>
