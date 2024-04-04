@@ -2,16 +2,16 @@
 
 ## Definition
 
-|             |                   |
-| ----------- | ----------------- |
-| Namespace   | mobject-seralizer |
-| Library     | mobject-seralizer |
-| Inheritance | I_Disposable      |
-| Implements  |                   |
+|             |                                                              |
+| ----------- | ------------------------------------------------------------ |
+| Namespace   | mobject-seralizer                                            |
+| Library     | mobject-seralizer                                            |
+| Inheritance | [I_Disposable](http://disposable.mobject.org/#/I_Disposable) |
+| Implements  |                                                              |
 
 ## Remarks
 
-The `I_Serializer` interface is designed to facilitate the serialization of various data types in a structured manner. It extends the `I_Disposable` interface, indicating that instances of `I_Serializer` should be disposed of properly to release resources. The interface provides a wide range of methods to add data of different types to the serialization stream, including primitive types, arrays, and complex objects implementing the `I_Serializable` interface. Additionally, it offers functionality to manage the serialization state, such as starting and ending objects and arrays, and methods to retrieve or reset the serialized data.
+The `I_Serializer` interface is designed to facilitate the serialization of various data types in a structured manner. It extends the [I_Disposable](http://disposable.mobject.org/#/I_Disposable) interface, indicating that instances of `I_Serializer` should be disposed of properly to release resources. The interface provides a wide range of methods to add data of different types to the serialization stream, including primitive types, arrays, and complex objects implementing the `I_Serializable` interface. Additionally, it offers functionality to manage the serialization state, such as starting and ending objects and arrays, and methods to retrieve or reset the serialized data.
 
 ## Methods
 
@@ -61,10 +61,13 @@ The following example demonstrates how to use the `I_Serializer` interface to se
 ```plaintext
 VAR
 	mySerializer: I_Serializer;
+	myString : T_MAXSTRING;
+	result : BOOL;
 END_VAR
 
 mySerializer.StartObject();
 mySerializer.AddKeyString('Name', 'Example Object');
 mySerializer.AddKeyDint('ID', 12345);
 mySerializer.EndObject();
+result := mySerializer.TryGetSerializedData(ADR(myString), SIZEOF(myString)); // result = TRUE, myString = '{"Name":"Example Object","ID":12345}'
 ```
