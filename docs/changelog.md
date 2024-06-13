@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.0-alpha
+
+- Updated to support mobject-disposable v1.1.1
+
 ## v0.4.0-alpha
 
 !> This update contains the following breaking changes.
