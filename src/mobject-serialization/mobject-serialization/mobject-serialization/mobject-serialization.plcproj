@@ -19,7 +19,7 @@
     <Company>mobject</Company>
     <Released>false</Released>
     <Title>mobject-serialization</Title>
-    <ProjectVersion>0.4.0</ProjectVersion>
+    <ProjectVersion>0.5.0</ProjectVersion>
     <DefaultNamespace>mobject-serialization</DefaultNamespace>
     <Placeholder>mobject-serialization</Placeholder>
     <Author>mobject dev team</Author>
@@ -47,7 +47,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <LibraryReference Include="mobject-disposable,1.0.0,mobject">
+    <LibraryReference Include="mobject-disposable,1.1.1,mobject">
       <Namespace>mobject_disposable</Namespace>
     </LibraryReference>
   </ItemGroup>
